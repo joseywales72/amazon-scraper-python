@@ -45,6 +45,7 @@ _CSS_SELECTORS_MOBILE_GRID = {
 _CSS_SELECTORS_DESKTOP = {
     "product": "ul > li.s-result-item > div.s-item-container",
     "title": "a.s-access-detail-page > h2",
+    "price": "a-size-base.a-color-base > span",
     "rating": "i.a-icon-star > span",
     "review_nb": "div.a-column.a-span5.a-span-last > \
                 div.a-row.a-spacing-mini > \
@@ -198,6 +199,7 @@ class Client(object):
                 title = _css_select(product,
                                     css_selector_dict.get("title", ""))
                 product_dict['title'] = title
+                price= _css_select(product,css_selector_dict_get("price",""))
                 rating = _css_select(product,
                                      css_selector_dict.get("rating", ""))
                 review_nb = _css_select(product,
